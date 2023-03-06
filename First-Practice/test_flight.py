@@ -11,10 +11,6 @@ if __name__ == '__main__':
     # Set the QUAV to takeoff
     tl_flight.takeoff().wait_for_completed()
 
-    # Make the QUAV execute movements
-    tl_flight.forward(distance=100).wait_for_completed()
-    tl_flight.backward(distance=100).wait_for_completed()
-
     # Set the QUAV to land
     tl_flight.land().wait_for_completed()
 
