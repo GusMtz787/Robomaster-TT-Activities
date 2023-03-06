@@ -8,16 +8,15 @@ if __name__ == '__main__':
 
     tl_flight = tl_drone.flight
 
-    # 起飞
+    # Set the QUAV to takeoff
     tl_flight.takeoff().wait_for_completed()
 
-    # # 向前飞50厘米，向后飞50厘米
-
+    # Make the QUAV execute movements
     tl_flight.forward(distance=100).wait_for_completed()
-    tl_flight.right(distance=50).wait_for_completed()
-     # tl_flight.backward(distance=10).wait_for_completed()
+    tl_flight.backward(distance=100).wait_for_completed()
 
-    # 降落
+    # Set the QUAV to land
     tl_flight.land().wait_for_completed()
 
+    # Close resources
     tl_drone.close()
