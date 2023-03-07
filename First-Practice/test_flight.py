@@ -1,4 +1,5 @@
 import robomaster
+import time 
 from robomaster import robot
 
 
@@ -10,6 +11,9 @@ if __name__ == '__main__':
 
     # Set the QUAV to takeoff
     tl_flight.takeoff().wait_for_completed()
+
+    # Add a delay to remain in hover
+    time.sleep(5)
 
     # Set the QUAV to land
     tl_flight.land().wait_for_completed()
