@@ -13,6 +13,7 @@ if __name__ == '__main__':
     tl_flight.takeoff().wait_for_completed()
 
     # Add a delay to remain in hover
+    print("Remaning in hover")
     time.sleep(5)
 
     # Set the QUAV to land
